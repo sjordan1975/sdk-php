@@ -14,6 +14,11 @@ class ARBGetSubscriptionRequest extends ANetApiRequestType
     private $subscriptionId = null;
 
     /**
+     * @property string $includeTransactions
+     */
+    private $includeTransactions = false;
+
+    /**
      * Gets as subscriptionId
      *
      * @return string
@@ -35,6 +40,26 @@ class ARBGetSubscriptionRequest extends ANetApiRequestType
         return $this;
     }
 
+    /**
+     * Gets as includeTransactions
+     *
+     * @return string
+     */
+    public function getIncludeTransactions()
+    {
+        return $this->includeTransactions;
+    }
 
+    /**
+     * Sets a new includeTransactions
+     *
+     * @param string $includeTransactions
+     * @return self
+     */
+    public function setIncludeTransactions($includeTransactions)
+    {
+        $this->includeTransactions = $includeTransactions;
+        return $this;
+    }
 }
 
